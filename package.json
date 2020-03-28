@@ -3,7 +3,7 @@
   "version": "2.2.9",
   "description": "A highly scalable, Progressive Web Application foundation with the best Developer Experience (DX).",
   "scripts": {
-    "start": "pawjs --no-cache --env=development start",
+    "start": "pawjs --no-cache --env-config-path=./.env --env=development start",
     "build": "pawjs --no-cache --env-config-path=./.prod.env --env=production build",
     "build:demo": "pawjs --no-cache --env-config-path=./.demo.env --env=production build",
     "lint": "pawjs lint",
@@ -44,6 +44,7 @@
     "cloudinary": "^1.20.0",
     "eslint-import-resolver-webpack": "^0.12.1",
     "feather-icons": "^4.26.0",
+    "firebase": "^7.13.0",
     "fork-ts-checker-webpack-plugin": "^4.1.0",
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.3",
