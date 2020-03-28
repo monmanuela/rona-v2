@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GuestLayout from './guest-layout';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {info} from './fakedata';
+import { Link2, Star } from 'react-feather';
 
 const Column = (props) => {
   const { title, description, link } = props;
@@ -43,14 +42,22 @@ Column.propTypes = {
   link: PropTypes.string.isRequired,
 };
 
+import image2 from "../resources/img/netflixparty.jpg";  //TODO: figure out how to use images from DB
+
 const CardList = ({ info }) => {
+  
   const cardsArray = info.map(info => (
     <div style={{marginBottom: '1rem'}}>
       <Card>
         <CardContent>
-          <Typography variant='h3'>{info.title}</Typography>
-          <Typography>{info.description}</Typography>
-          <Typography>{info.img}</Typography>
+          <Typography style={{textAlign: 'center', fontFamily: 'Montserrat', fontWeight: '600'}} variant='h3'>{info.title}</Typography>
+          <img src={image2}></img>
+          <Typography style={{textAlign: 'center', fontFamily: 'Montserrat'}}>{info.description}</Typography>
+          <div style={{display: 'flex', justifyContent: 'end'}}>
+            <Link2 size='20' color='#4a4a4a' strokeWidth='1.5' style={{margin: '5px'}}/>
+            <Star size='20' color='#4a4a4a' strokeWidth='1.5' style={{margin: '5px'}}/>
+          </div>
+         
         </CardContent>
       </Card>
     </div>
