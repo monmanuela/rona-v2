@@ -1,3 +1,4 @@
+
 import SplashImage from '../resources/img/seo/home-splash-screen.png';
 
 export default [
