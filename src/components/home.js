@@ -9,7 +9,6 @@ require('typeface-montserrat')
 import image2 from "../resources/img/netflixparty.jpg";  //TODO: figure out how to use images from DB
 
 const CardList = ({ info }) => {
-  
   const cardsArray = info.map(info => (
     <div style={{marginBottom: '1rem'}}>
       <Card>

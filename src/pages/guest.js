@@ -1,5 +1,4 @@
 import FeaturesImage from '../resources/img/seo/features.png';
-
 export default [
   {
     path: '/',
