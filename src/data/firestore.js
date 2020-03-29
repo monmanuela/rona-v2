@@ -19,31 +19,6 @@ if (!firebase.apps.length) {
 
 const db = firebase.firestore();
 
-let articlesRef = db.collection('articles');
-
-let article = {
-  title: 'Netflix Party',
-  description: 'Netflix Party is a new way to watch Netflix with your friends online. Netflix Party synchronizes video playback and adds group chat to your favorite Netflix shows.',
-  link: 'https://www.netflixparty.com/',
-  tags: [
-    "entertainment",
-    "zoomer",
-    "free",
-  ],
-  image: "https://lh3.googleusercontent.com/tzwGvR7pMqR6dumQ-YJImEcj4bV3Seu0I0QTrsg7_v2CyXyC2E15F6k-T2uNYXBQgiUVuTVt=w640-h400-e365"
-};
-
-export const getArticles = function() {
-  return articlesRef.get()
-    .then(snapshot => {
-      snapshot.forEach(doc => {
-        console.log(doc.data());
-      });
-    })
-    .catch(err => {
-      console.log('Error getting documents', err);
-    });
-};
-
+export const articlesRef = db.collection('articles');
 export default db;
 
