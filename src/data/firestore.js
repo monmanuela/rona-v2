@@ -1,4 +1,4 @@
-import * as firebase from "firebase/app";
+import firebase from 'firebase';
 import "firebase/firestore";
 
 const firebaseConfig = {
@@ -11,12 +11,15 @@ const firebaseConfig = {
   appId: process.env.APP_ID,
   measurementId: process.env.MEASUREMENT_ID
 };
+
 // Initialize Firebase
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
 const db = firebase.firestore();
+
+let articlesRef = db.collection('articles');
 
 let article = {
   title: 'Netflix Party',
@@ -30,18 +33,16 @@ let article = {
   image: "https://lh3.googleusercontent.com/tzwGvR7pMqR6dumQ-YJImEcj4bV3Seu0I0QTrsg7_v2CyXyC2E15F6k-T2uNYXBQgiUVuTVt=w640-h400-e365"
 };
 
-// Returns a promise, create a new article
-function createNewArticle(article) {
-  console.log("HELLOOOOOOO - CREATE NEW ARTICLE");
-  return db.collection('articles').add(article);
-}
-
-export const testing = function() {
-  console.log("HELLOOOOOOO - TESTING");
-  let addArticle = createNewArticle(article).then(ref => {
-    console.log("Added a new article: ", ref.id)
-  });
-  console.log(addArticle);
+export const getArticles = function() {
+  return articlesRef.get()
+    .then(snapshot => {
+      snapshot.forEach(doc => {
+        console.log(doc.data());
+      });
+    })
+    .catch(err => {
+      console.log('Error getting documents', err);
+    });
 };
 
 export default db;

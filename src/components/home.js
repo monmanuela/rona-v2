@@ -6,21 +6,19 @@ import Typography from '@material-ui/core/Typography';
 import {info} from './fakedata';
 require('typeface-montserrat');
 import { Link2, Star } from 'react-feather';
-import {testing} from '../data/firestore'
+import {getArticles} from '../data/firestore'
 
 import image2 from "../resources/img/netflixparty.jpg";  //TODO: figure out how to use images from DB
 
 const CardList = ({ info }) => {
   const cardsArray = info.map(info => {
-    console.log("HELLOOOO - HOME");
-    testing();
-
+    // let articlePromise = getArticles();
     return (
     <div style={{marginBottom: '1rem'}}>
       <Card>
         <CardContent>
           <Typography style={{textAlign: 'center', fontFamily: 'Montserrat', fontWeight: '600'}} variant='h3'>{info.title}</Typography>
-          <img src={image2}></img>
+          <img src={image2} alt={info.title}/>
           <Typography style={{textAlign: 'center', fontFamily: 'Montserrat'}}>{info.description}</Typography>
           <Typography style={{textAlign: 'end', fontFamily: 'Montserrat', marginTop: '10px', marginRight: '10px'}} color= 'textSecondary'><a href={`https://${info.link}/`} target="_blank">Link to Source</a></Typography>
         </CardContent>
