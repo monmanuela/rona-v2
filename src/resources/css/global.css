@@ -3,6 +3,8 @@
   color: #fff;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 @keyframes blink {
   0% { opacity: 0.7; }
   40% { opacity: 0.9; }
@@ -30,6 +32,7 @@ body {
 .title strong {
   color: #571515;
   font-size: xxx-large;
+  font-weight: bold;
 }
 
 .cardText {

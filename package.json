@@ -49,6 +49,7 @@
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.3",
     "snyk": "^1.301.0",
+    "typeface-montserrat": "0.0.75",
     "universal-fetch": "^1.0.0"
   },
   "snyk": true,
