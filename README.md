@@ -1,5 +1,5 @@
 # TODO:
-- [*] Host images from Google Drive
+- [x] Host images from Google Drive
 - [ ] Modify DB to ensure no duplicate entries
 - [ ] Host publicly (Heroku, Amazon EC2)
 
