@@ -4,12 +4,18 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import {info} from './fakedata';
-require('typeface-montserrat')
+require('typeface-montserrat');
+import { Link2, Star } from 'react-feather';
+import {testing} from '../data/firestore'
 
 import image2 from "../resources/img/netflixparty.jpg";  //TODO: figure out how to use images from DB
 
 const CardList = ({ info }) => {
-  const cardsArray = info.map(info => (
+  const cardsArray = info.map(info => {
+    console.log("HELLOOOO - HOME");
+    testing();
+
+    return (
     <div style={{marginBottom: '1rem'}}>
       <Card>
         <CardContent>
@@ -20,7 +26,7 @@ const CardList = ({ info }) => {
         </CardContent>
       </Card>
     </div>
-  ));
+  )});
 
   return (
     <div>

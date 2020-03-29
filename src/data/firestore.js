@@ -17,4 +17,32 @@ if (!firebase.apps.length) {
 }
 
 const db = firebase.firestore();
+
+let article = {
+  title: 'Netflix Party',
+  description: 'Netflix Party is a new way to watch Netflix with your friends online. Netflix Party synchronizes video playback and adds group chat to your favorite Netflix shows.',
+  link: 'https://www.netflixparty.com/',
+  tags: [
+    "entertainment",
+    "zoomer",
+    "free",
+  ],
+  image: "https://lh3.googleusercontent.com/tzwGvR7pMqR6dumQ-YJImEcj4bV3Seu0I0QTrsg7_v2CyXyC2E15F6k-T2uNYXBQgiUVuTVt=w640-h400-e365"
+};
+
+// Returns a promise, create a new article
+function createNewArticle(article) {
+  console.log("HELLOOOOOOO - CREATE NEW ARTICLE");
+  return db.collection('articles').add(article);
+}
+
+export const testing = function() {
+  console.log("HELLOOOOOOO - TESTING");
+  let addArticle = createNewArticle(article).then(ref => {
+    console.log("Added a new article: ", ref.id)
+  });
+  console.log(addArticle);
+};
+
 export default db;
+
