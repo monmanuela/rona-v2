@@ -56,9 +56,11 @@ const CardList = ({ articles }) => {
         <Card>
           <CardContent>
             <Typography style={{textAlign: 'center', fontFamily: 'Montserrat', fontWeight: '600'}} variant='h3'>{article.title}</Typography>
-            <img src={article.image} alt={article.title} />
+            <div style={{display: 'flex'}}>
+              <img style={{margin: 'auto', maxHeight: '500px'}} src={article.image} alt={article.title} />
+            </div>
             <Typography style={{textAlign: 'center', fontFamily: 'Montserrat'}}>{article.description}</Typography>
-            <Typography style={{textAlign: 'end', fontFamily: 'Montserrat', marginTop: '10px', marginRight: '10px'}} color= 'textSecondary'><a href={`https://${article.link}/`} target="_blank">Link to Source</a></Typography>
+            <Typography style={{textAlign: 'end', fontFamily: 'Montserrat', marginTop: '10px', marginRight: '10px'}} color= 'textSecondary'><a href={`${article.link}`} target="_blank">Link to Source</a></Typography>
           </CardContent>
         </Card>
       </div>
