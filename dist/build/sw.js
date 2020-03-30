@@ -1,4 +1,4 @@
-self.paw__env={"PAW_CACHE":"true","PAW_ENV":"production","PAW_HOT":"false","PAW_VERBOSE":"false"};importScripts("/precache-manifest.cdc0148b42cb7ab25e8bd6b5a6aadb48.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+self.paw__env={"PAW_CACHE":"true","PAW_ENV":"production","PAW_HOT":"false","PAW_VERBOSE":"false"};importScripts("/precache-manifest.cb1d50e4da29356a1017bd5d5af3071d.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 // eslint-disable-next-line
 const serviceWorker = self;
@@ -77,4 +77,4 @@ serviceWorker.workbox.routing.setDefaultHandler(({ event }) => {
 // eslint-disable-next-line
 serviceWorker.workbox.precaching.precacheAndRoute(serviceWorker.__precacheManifest);
 
-;self.paw__offline_assets = ["/css/4605d0347480083b4005.css","/js/4605d0347480083b4005.js","/css/7b8fcdfce1799b2aaadc.css","/js/7b8fcdfce1799b2aaadc.js"];self.paw__injected_variables = {"workboxDebug":true,"port":"3000","host":"0.0.0.0","appRootUrl":"","cdnUrl":"","serverSideRender":true,"serviceWorker":true,"singlePageApplication":false,"asyncCSS":true,"polyfill":"internal","react":"internal","clientRootElementId":"app","assetsMaxAge":2592000000,"hstsEnabled":true,"hstsMaxAge":31536000,"hstsIncludeSubDomains":true,"hstsPreload":false,"noJS":false,"resourcesBaseUrl":"/"};
+;self.paw__offline_assets = ["/css/c3a97238fea59f25d77c.css","/js/c3a97238fea59f25d77c.js","/css/7b8fcdfce1799b2aaadc.css","/js/7b8fcdfce1799b2aaadc.js"];self.paw__injected_variables = {"workboxDebug":true,"port":"3000","host":"0.0.0.0","appRootUrl":"","cdnUrl":"","serverSideRender":true,"serviceWorker":true,"singlePageApplication":false,"asyncCSS":true,"polyfill":"internal","react":"internal","clientRootElementId":"app","assetsMaxAge":2592000000,"hstsEnabled":true,"hstsMaxAge":31536000,"hstsIncludeSubDomains":true,"hstsPreload":false,"noJS":false,"resourcesBaseUrl":"/"};
