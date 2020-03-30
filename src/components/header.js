@@ -20,7 +20,7 @@ export default class Header extends PureComponent {
                     marginBottom: 0,
                 }}
                 >
-                  <Link to="/" className="navbar-item"><strong>RoNA</strong></Link>
+                  <Link to="/" className="navbar-item"><strong style={{color: '#571515', fontWeight: 'bold', fontFamily: 'Montserrat', fontSize: 'xxx-large'}}>RoNA</strong></Link>
               </div>
             </div>
           </div>
