@@ -36,9 +36,9 @@ export default class Home extends React.Component {
       <GuestLayout>
         <section className="m-t-lg">
           <div className="container p-l-md p-r-md">
-            <h4 className="title is-4" style={{textAlign:'center'}}>
-              stay at home!! here are some stuff you can do when you're bored:
-            </h4>
+            <h5 className="title is-6" style={{textAlign:'center'}}>
+            These past few weeks of partial lockdowns have seen many small businesses on the verge of shutting down. We’d hate to see our favorite coffee shops, local cinemas and bakeries go, so let’s support them while still practising social distancing and staying at home! 
+            </h5>
             <div>
               <CardList articles={this.state.articles} />
             </div>
