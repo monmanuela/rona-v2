@@ -52,11 +52,11 @@ export default class Home extends React.Component {
 const CardList = ({ articles }) => {
   const cardsArray = articles.map(article => {
     return (
-      <div style={{marginBottom: '1rem'}}>
+      <div style={{marginBottom: '1rem'}} key={article.title}>
         <Card>
           <CardContent>
             <Typography style={{textAlign: 'center', fontFamily: 'Montserrat', fontWeight: '600'}} variant='h3'>{article.title}</Typography>
-            <img src={article.image} alt={article.title}/>
+            <img src={article.image} alt={article.title} />
             <Typography style={{textAlign: 'center', fontFamily: 'Montserrat'}}>{article.description}</Typography>
             <Typography style={{textAlign: 'end', fontFamily: 'Montserrat', marginTop: '10px', marginRight: '10px'}} color= 'textSecondary'><a href={`https://${article.link}/`} target="_blank">Link to Source</a></Typography>
           </CardContent>
